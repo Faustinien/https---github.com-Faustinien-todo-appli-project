@@ -1,6 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { GlobalStyle } from '../styles/App.styles'
-import Subscription from './Subscribe'
+import Connection from './Connection'
+import Home from './Home'
+import NewTodoList from './NewTodoList'
+import Subscribe from './Subscribe'
 
 /**
  * Composant principal de l'application
@@ -10,8 +13,11 @@ export default function App() {
     <BrowserRouter>
       <GlobalStyle />
       <Routes>
-        <Route path="/" element={<h1>Super Todo</h1>} />
-        <Route path="/inscription" element={<Subscription />} />
+        <Route path="/" element={<Connection />}>
+          <Route path="" element={<Home />} />
+          <Route path="nouvelle-liste" element={<NewTodoList />} />
+        </Route>
+        <Route path="/inscription" element={<Subscribe />} />
       </Routes>
     </BrowserRouter>
   )

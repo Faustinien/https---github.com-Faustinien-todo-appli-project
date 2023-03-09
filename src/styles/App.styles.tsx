@@ -11,6 +11,7 @@ export const Theme = {
     green: '#557859',
     deepBlue: '#264F4A',
     white: '#EFEFEF',
+    red: '#BB8579',
   },
 }
 
